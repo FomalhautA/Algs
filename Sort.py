@@ -66,6 +66,54 @@ def heap_sort(a):
         max_heapify(a, 0, i-1)
 
 
+def merge(a, b):
+    """
+
+    :param a:
+    :param b:
+    :return:
+    """
+    temp = []
+    la = len(a)
+    lb = len(b)
+    i = 0
+    j = 0
+    while i < la and j < lb:
+        if a[i] <= b[j]:
+            temp.append(a[i])
+            i += 1
+        else:
+            temp.append(b[j])
+            j += 1
+
+    if i < la:
+        temp.extend(a[i:])
+    if j < lb:
+        temp.extend(b[j:])
+
+    return temp
+
+
+def merge_sort(a):
+    """
+
+    :param a:
+    :return:
+    """
+    merge_lst = [[item] for item in a]
+
+    while len(merge_lst) > 1:
+        l = len(merge_lst)
+        i = 0
+        temp = []
+        while i+1 < l:
+            temp.append(merge(merge_lst[i], merge_lst[i+1]))
+            i += 2
+        merge_lst = temp
+
+    return merge_lst[0]
+
+
 if __name__ == '__main__':
     a = [2, 1, 4, 2, 3, 9, 4, 2]
 
@@ -76,3 +124,8 @@ if __name__ == '__main__':
     a = [2, 1, 4, 2, 3, 9, 4, 2]
     heap_sort(a)
     print(a)
+
+    a = [2, 1, 4, 2, 3, 9, 4, 2]
+    b = merge_sort(a)
+    print(b)
+
