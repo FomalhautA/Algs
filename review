@@ -5,7 +5,7 @@
 双指针法
 Top-K 算法
 K-means 算法
-K-nearest 算法
+K-nearest 算法二叉搜索树和B树
 
 二叉排序树 BST
 二叉树的前中后序遍历（递归和非递归遍历） (DFS)
@@ -16,10 +16,19 @@ K-nearest 算法
 红黑树 Red-Black Tree
 BIT Binary-Indexed Tree (Fenwick Tree)
 B-Tree / B+ Tree
+二叉搜索树 Binary Search Tree
 
 
 快速排序
-堆排序
+堆 Heap
 归并排序 Merge Sort
 Modified Merge Sort
 
+并查集 Union Find
+Sorted Map
+Segment Tree
+分治 Divide and Conquer
+滑动窗口 Sliding Window
+
+递归 Recursion
+深度优先遍历 Depth First Search
